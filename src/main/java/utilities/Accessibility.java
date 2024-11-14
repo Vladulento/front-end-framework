@@ -19,6 +19,7 @@ public class Accessibility {
       try {
         htmlCsRunner.execute();
         htmlCsRunner.generateHtmlReport();
+        System.out.println("Hola mundo");
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
