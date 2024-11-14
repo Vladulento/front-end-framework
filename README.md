@@ -444,6 +444,8 @@ Leire Fuchun Jimenez Gonzalez
 
 Ciro Alonso Aquino
 
+Vlad Alexandru Simion
+
 ### Acknowledgments
 
 Special thanks to our contributors and the open-source community for their valuable contributions
