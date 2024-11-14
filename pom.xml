@@ -5,7 +5,7 @@
 
     <groupId>org.nttdata</groupId>
     <artifactId>front-end-framework</artifactId>
-    <version>1.0.4</version>
+    <version>1.1.7</version>
     <packaging>jar</packaging>
 
     <name>front-end-framework</name>
@@ -231,7 +231,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/raunelgarcia/front-end-framework</url>
+            <url>https://maven.pkg.github.com/NTTData-QA/front-end-framework</url>
         </repository>
     </distributionManagement>
 </project>
