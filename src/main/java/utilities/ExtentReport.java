@@ -144,7 +144,7 @@ public class ExtentReport {
     }
 
     public static void attachTextFileToReport(File file) {
-        test.info("Network Lof File: <a href='".concat(file.getAbsolutePath()).concat("'>Download Log</a>"));
+        test.info("Network Log File: <a href='".concat(file.getAbsolutePath()).concat("'>Download Log</a>"));
     }
 
     public static void attachScreenshot(WebDriver driver) {
