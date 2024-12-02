@@ -16,11 +16,9 @@ public class JSExecutor {
       JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
       Object result = jsExecutor.executeScript(script, args);
 
-      ExtentReport.addMessage(Status.PASS, "JavaScrip executed correctly");
       Logger.infoMessage("JavaScrip results: " + result);
 
     } catch (Exception e) {
-      ExtentReport.addThrowable(e);
       e.printStackTrace();
     }
   }

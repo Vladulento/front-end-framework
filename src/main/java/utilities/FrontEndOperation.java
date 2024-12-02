@@ -199,34 +199,20 @@ public class FrontEndOperation {
   }
 
   public static boolean compareTexts(WebElement element, String textCode) {
-    StringBuilder message = new StringBuilder();
-    message.append("Comparing the following texts").append("<br>");
-    message.append("element's: (").append(element.getText()).append(")<br>");
-    message.append("expected: (").append(textCode).append(")<br>");
+      String message = "Comparing the following texts" + "<br>" +
+              "element's: (" + element.getText() + ")<br>" +
+              "expected: (" + textCode + ")<br>";
 
-    try{
-      MatcherAssert.assertThat(message.toString(), element.getText().equalsIgnoreCase(textCode), is(true));
-      ExtentReport.addComparative(message.toString(), true);
+      MatcherAssert.assertThat(message, element.getText().equalsIgnoreCase(textCode), is(true));
       return true;
-    } catch (AssertionError e) {
-      ExtentReport.addComparative(message.toString(), false);
-      throw e;
-    }
   }
 
   public static <T> void checkThat(String validation, T actual, Matcher<T> expected) {
-    StringBuilder message = new StringBuilder();
-    message.append("Verifying that ").append(validation.toLowerCase()).append("<br>");
-    message.append("(expectation: ").append(expected.toString()).append(")<br>");
-    message.append("(actual: ").append(actual.toString()).append(")<br>");
+      String message = "Verifying that " + validation.toLowerCase() + "<br>" +
+              "(expectation: " + expected.toString() + ")<br>" +
+              "(actual: " + actual.toString() + ")<br>";
 
-    try {
-      MatcherAssert.assertThat(message.toString(), actual, expected);
-      ExtentReport.addComparative(message.toString(), true);
-    } catch (AssertionError error) {
-      ExtentReport.addComparative(message.toString(), false);
-      throw error;
-    }
+      MatcherAssert.assertThat(message, actual, expected);
   }
 
   public static void switchToNativeContext() {
